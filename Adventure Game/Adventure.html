@@ -7,44 +7,37 @@
         <h1>Adventure Game v1.0</h1>
         <p>Made by: Avery Brown</p>
         <script>
-           /* alert("Oven:'Ding, fries are done!' ");
-            confirm("'Are you going to eat those fries?'");
-            prompt("How did you like your fries?");
-            
-            alert("An ogre is coming at us!");
-            confirm("Will you fight the ogre?");
-            prompt("How do you want to kill the ogre?");
-            
-            alert("Knackles is coming!");
-            confirm("Knackles: 'Do you know da wae?'")
-            prompt("Knackles wants you to show him the way.")
-            */
-            
-            var favColor = prompt("What is your favorite color?").toLowerCase();
-            
-            if(favColor == "blue"){
-                alert("I don't very much like blue.....");
-            }
-            else if(favColor == "red"){
-                alert("THE COLOR OF FIRE!!!")
-            }
-            else if(favColor == "green"){
-                alert("Green....like money, right?")
-            }
-            else if(favColor == "yellow"){
-                alert("Like Junkrat's hair!")
-            }
-            else if(favColor == "purple"){
-                alert("Sorry, but I hate Sombra.")
-            }
-            else if(favColor == "orange"){
-                alert("Like Junrat's Pants!")
-            }
-            else if(favColor == "black"){
-                alert("Black, the color of gunpowder!")
-            }
-            else{
-                alert("Type a real color you cobbar!")
+            Start();
+          
+            function Start(){
+                var playerName = prompt("What is your name?");
+                
+                var playerGender = prompt("What is your gender?");
+                
+                var playerAge = prompt("How old are you?");
+                
+                var acceptPlayer = confirm("So your name is " + playerName + " and you are a " + playerAge + " year old " + playerGender + " ?");
+                
+                if(acceptPlayer){
+                    startGame();
+                }
+                else{
+                    Start();
+                }
+                
+               function startGame(){
+                 confirm("Are you ready to begin?");  
+               } 
+                
+                if(startGame){
+                    Village();
+                }
+                else{
+                    alert("Well fine then. Getta outa here!");
+                }
+                function Village(){
+                    var village = prompt("You find yourself laying in the grass of a large clearing in a forest with tall trees.");
+                }
             }
             
         </script>
