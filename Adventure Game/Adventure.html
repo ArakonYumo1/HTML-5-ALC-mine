@@ -36,7 +36,34 @@
                     alert("Well fine then. Getta outa here!");
                 }
                 function Village(){
-                    var village = prompt("You find yourself laying in the grass of a large clearing in a forest with tall trees.");
+                    var village = prompt("You wake up feeling rested. You are laying in a small bed in a small cottage. Outside the window, you can see other buildings that make up a village. You have no memory of how you got here. What do you do?").toLowerCase();
+                    
+                    
+                    switch(village){
+                        case "get out of bed":
+                            var whatDoOne = prompt("You get out of the bed. There is a small kitchen to the left of the room. There is a door leading to a bathroom on the right side. There is also some homey furniture. What to you do?").toLowerCase();
+                         break;
+                            
+                        case "go back to sleep":
+                            village();
+                            break;
+                
+                            switch(whatDoOne){
+                                case "go to kitchen":
+                                    var whatDoTwo = prompt("There is a small gas powered stove. A cupboard is above.").toLowerCase();
+                                 break;
+                                    
+                                    switch(whatDoTwo){
+                                        case "open cupboard":
+                                            var whatDoThree = prompt("You open the cupboard. The small door squeakily opens, yeilding no food.").toLowerCase();
+                                          break;
+                                            
+                                             
+                                                    }
+                                            }
+                           }
+                    
+                    
                 }
             }
             
