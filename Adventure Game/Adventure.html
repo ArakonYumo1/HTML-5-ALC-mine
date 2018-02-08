@@ -17,6 +17,9 @@
             Start();
           
             function Start(){
+                
+                alert("This game is a work in progress. Some parts may not work properly. If it goes to the title part that just says ADVENTURE GAME, then refresh the page. It will restart the game from the beggining.")
+                
                 var playerName = prompt("What is your name?");
                 
                 var playerGender = prompt("What is your gender?");
@@ -49,31 +52,39 @@
                     switch(village){
                         case "get out of bed":
                             var whatDoOne = prompt("You get out of the bed. There is a small kitchen to the left of the room. There is a door leading to a bathroom on the right side. There is also some homey furniture. What do you do?").toLowerCase();
-                        
+                            break;
                             
-                       // case "go back to sleep":
-                          //  Village();
-                           // break;
+                        case "go back to sleep":
+                            Village();
+                            break;
+                            
+                            case "poop":
+                            alert("hunter you suck")
+                            break;
+                            
+                        default:
+                            alert("That is not currently an option. Please type something else and try again.");
+                            Village();
+                            break;
+                                  }
+                    
                 
                             switch(whatDoOne){
                                 case "go to kitchen":
                                     var whatDoTwo = prompt("There is a small gas powered stove. A cupboard is above.").toLowerCase();
+                                            }
+                                            
                                  
                                     
                                     switch(whatDoTwo){
                                         case "open cupboard":
-                                           alert("You open the cupboard. The small door squeakily opens, yeilding no food.");
-                                          
-                                            
-                                             
+                                           alert("You open the cupboard. The small door squeakily opens, yeilding no food.");  
                                                     }
-                                            }
-                           }
-                    
-                    
+                        
+                    }
                 }
-            }
-            
+        
+        
         </script>
     </body>
 </html>
