@@ -7,6 +7,13 @@
         <h1>Adventure Game v1.0</h1>
         <p>Made by: Avery Brown</p>
         <script>
+            var inventory = {
+                coins:1000,
+                bread:0,
+                sword:0,
+                kineticblast:0,
+                blaster:0,
+            }
             Start();
           
             function Start(){
@@ -41,22 +48,22 @@
                     
                     switch(village){
                         case "get out of bed":
-                            var whatDoOne = prompt("You get out of the bed. There is a small kitchen to the left of the room. There is a door leading to a bathroom on the right side. There is also some homey furniture. What to you do?").toLowerCase();
-                         break;
+                            var whatDoOne = prompt("You get out of the bed. There is a small kitchen to the left of the room. There is a door leading to a bathroom on the right side. There is also some homey furniture. What do you do?").toLowerCase();
+                        
                             
-                        case "go back to sleep":
-                            village();
-                            break;
+                       // case "go back to sleep":
+                          //  Village();
+                           // break;
                 
                             switch(whatDoOne){
                                 case "go to kitchen":
                                     var whatDoTwo = prompt("There is a small gas powered stove. A cupboard is above.").toLowerCase();
-                                 break;
+                                 
                                     
                                     switch(whatDoTwo){
                                         case "open cupboard":
-                                            var whatDoThree = prompt("You open the cupboard. The small door squeakily opens, yeilding no food.").toLowerCase();
-                                          break;
+                                           alert("You open the cupboard. The small door squeakily opens, yeilding no food.");
+                                          
                                             
                                              
                                                     }
