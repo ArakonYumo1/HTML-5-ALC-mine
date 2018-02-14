@@ -28,6 +28,11 @@
                 
                 var acceptPlayer = confirm("So your name is " + playerName + " and you are a " + playerAge + " year old " + playerGender + " ?");
                 
+                var invList = function(){
+                    alert("Coins = "+ inventory.coins +
+                         "\nBread = "+ inventory.bread);
+                }
+                
                 if(acceptPlayer){
                     startGame();
                 }
@@ -72,14 +77,70 @@
                             switch(whatDoOne){
                                 case "go to kitchen":
                                     var whatDoTwo = prompt("There is a small gas powered stove. A cupboard is above.").toLowerCase();
+                                    break;
+                                    
+                                case "go to bathroom":
+                                    var whatDoThree = prompt("You enter the bathroom. There is a small white toilet and a sink.").toLowerCase();
+                                    break;
+                                    
+                                case "go outside":
+                                    var whatDoFour = prompt("You are nearly blinded by the bright light. As you walk outside, you can hear the sweet sound of birds chirping and people talking and laughing. On your right, there is a long main road into the village. To your left, is a road leading out of town").toLowerCase();
+                                    break;
+                                    
+                                case "go back to bed":
+                                    Village();
+                                    break;
+                                    
+                                default:
+                                    alert("That is not currently an option. Please type something else and try again.")
+                                    Village();
+                                    break;
                                             }
                                             
                                  
                                     
                                     switch(whatDoTwo){
                                         case "open cupboard":
-                                           alert("You open the cupboard. The small door squeakily opens, yeilding no food.");  
-                                                    }
+                                           alert("You open the cupboard. The small door squeakily opens, yeilding no food.");
+                                            Village();
+                                            break;
+                                            
+                                        case "turn on stove":
+                                            var whatDoFive = prompt("The stove begins emenating heat. Do you want to leave it on? Or turn it off?").toLowerCase();
+                                            break;
+                                            
+                                        default:
+                                            alert("That is not currently an option. Please type something else and try again.");
+                                            Village();
+                                            break;
+                                            
+                    switch(whatDoThree){
+                        case "use the toilet":
+                            var whatDoSix = prompt("WARNING: the following part of the game may get a bit gross. If you do not wish to read it, then please restart the game. Do you want to sit or stand?").toLowerCase();
+                            break;
+                            
+                            case "use the sink":
+                            alert("You wash your hands. You are filled with a feeling a cleanliness.");
+                            break;
+                            
+                        default:
+                            alert("That is not currently an option. Please type something else and try again.");
+                            Village();
+                            break;
+                                      }                                }
+                    
+                    
+                    switch(whatDoFive){
+                        case "leave it on":
+                            alert("The heat of the stove makes the house catch fire. Being the idiot you are, you can't find the way out and you and the house both burn to the ground. You are dead.")
+                            break;
+                            
+                        case "turn it off":
+                            alert("You turn off the stove and let out a sigh of relief. You just prevented a possible fire and death.");
+                            Village();
+                            break;
+                            
+                                     }
                         
                     }
                 }
